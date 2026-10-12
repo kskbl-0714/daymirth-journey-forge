@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.daymirth.journey'
+    compileSdk 35
+    defaultConfig {
+        applicationId '__PACKAGE_ID__'
+        minSdk 24
+        targetSdk 35
+        versionCode __VERSION_CODE__
+        versionName '__VERSION_NAME__'
+    }
+    signingConfigs {
+        release {
+            if (System.getenv('DAYMIRTH_KEYSTORE')) {
+                storeFile file(System.getenv('DAYMIRTH_KEYSTORE'))
+                storePassword System.getenv('DAYMIRTH_STORE_PASSWORD')
+                keyAlias System.getenv('DAYMIRTH_KEY_ALIAS') ?: 'daymirth'
+                keyPassword System.getenv('DAYMIRTH_KEY_PASSWORD') ?: System.getenv('DAYMIRTH_STORE_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release { minifyEnabled false; if (System.getenv('DAYMIRTH_KEYSTORE')) signingConfig signingConfigs.release }
+    }
+}

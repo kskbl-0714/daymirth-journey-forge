@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "tripId": "harbor-old-town-demo",
+  "app": {
+    "name": "TripPocket Demo",
+    "subtitle": "Harbor City · Old Town",
+    "language": "bilingual",
+    "cover": "media/cover.jpg",
+    "theme": {"primary": "#146C63", "accent": "#D8972E"}
+  },
+  "settings": {"embeddedMap": "osm", "navigation": "system", "privacy": "public-demo", "platforms": ["android", "iphone"]},
+  "android": {"packageId": "com.daymirth.trip.harboroldtown", "versionCode": 1, "versionName": "1.0-demo"},
+  "travelers": [
+    {"id": "traveler-alex-demo", "displayName": "Alex Demo"},
+    {"id": "traveler-sam-demo", "displayName": "Sam Demo"},
+    {"id": "traveler-lee-demo", "displayName": "Lee Demo"}
+  ],
+  "days": [
+    {
+      "id": "day-1", "label": "Day 1", "date": "2027-05-14", "title": "Harbor arrival",
+      "banner": "media/day-1.jpg", "bannerAlt": "Original illustrated harbor banner", "bannerReason": "Matched to the ferry and waterfront theme.",
+      "notices": ["Fictional demo: no reservation in this App is valid.", "Ferry check-in closes 20 minutes before departure."],
+      "events": [
+        {"id": "d01-e01-north-harbor", "time": "09:30–10:45", "period": "morning", "title": "North Harbor", "kind": "sight", "description": "Walk the public quay before the ferry.", "address": "North Harbor, Harbor City", "coordinates": {"lat": 43.6045, "lng": 1.4440}, "photo": "media/north-harbor.jpg", "photoAlt": "Original fictional illustration of North Harbor", "photoLabel": "Contextual illustration · not a real landmark photograph", "notices": ["Upper viewpoint uses stairs."], "navigationQuery": "Place du Capitole Toulouse"},
+        {"id": "d01-e02-sunset-ferry", "time": "17:10", "period": "evening", "title": "Sunset ferry", "kind": "transport", "description": "Board at Pier 4 with the fictional demo document.", "address": "Pier 4, Harbor City", "coordinates": {"lat": 43.5990, "lng": 1.4490}, "notices": ["Bring the original booking file when using a real App."]}
+      ]
+    },
+    {
+      "id": "day-2", "label": "Day 2", "date": "2027-05-15", "title": "Museum and garden",
+      "banner": "media/day-2.jpg", "bannerAlt": "Original illustrated museum banner", "bannerReason": "Matched to the museum and slow-walking theme.",
+      "events": [
+        {"id": "d02-e01-civic-museum", "time": "10:00", "period": "morning", "title": "Civic Museum", "description": "A fictional collection used to test the App flow.", "coordinates": {"lat": 43.6008, "lng": 1.4393}, "photo": "media/civic-museum.jpg", "photoAlt": "Original fictional museum illustration", "photoLabel": "Contextual illustration · not a real landmark photograph", "navigationQuery": "Toulouse France museum"},
+        {"id": "d02-e02-lantern-garden", "period": "afternoon", "title": "Lantern Garden", "description": "Unhurried garden walk; exact time intentionally omitted.", "coordinates": {"lat": 43.5962, "lng": 1.4511}, "photo": "media/lantern-garden.jpg", "photoAlt": "Original fictional garden illustration", "photoLabel": "Contextual illustration · not a real landmark photograph"}
+      ]
+    }
+  ],
+  "tickets": [
+    {"id": "ticket-fictional-ferry", "title": "Fictional ferry · two pages", "originalName": "fictional-ferry.pdf", "file": "tickets/fictional-ferry.pdf", "mimeType": "application/pdf", "eventIds": ["d01-e01-north-harbor", "d01-e02-sunset-ferry"], "travelerIds": ["traveler-alex-demo", "traveler-sam-demo"], "pageCount": 2, "notes": "Fictional public demo; not valid for travel."},
+    {"id": "ticket-local-import-demo", "title": "Local import example", "mimeType": "image/png", "eventIds": ["d01-e02-sunset-ferry"], "travelerIds": ["traveler-lee-demo"], "deliveryMode": "local-import", "notes": "Fictional public demo metadata; choose a local PNG to test import."}
+  ],
+  "mediaCredits": [
+    {"file": "media/cover.jpg", "subject": "Fictional cover", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false},
+    {"file": "media/day-1.jpg", "subject": "Day 1 fictional banner", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false},
+    {"file": "media/day-2.jpg", "subject": "Day 2 fictional banner", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false},
+    {"file": "media/north-harbor.jpg", "subject": "Fictional North Harbor", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false},
+    {"file": "media/civic-museum.jpg", "subject": "Fictional Civic Museum", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false},
+    {"file": "media/lantern-garden.jpg", "subject": "Fictional Lantern Garden", "sourceUrl": null, "author": "DayMirth Journey Forge", "license": "MIT; original generated demo art", "verifiedRealPlace": false}
+  ]
+}

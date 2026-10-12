@@ -1,0 +1,6 @@
+interface:
+  display_name: "DayMirth Journey Forge"
+  short_description: "Create installable travel apps from your itinerary"
+  default_prompt: "Use $daymirth-journey-forge to turn my confirmed itinerary and tickets into a previewable, installable travel app."
+policy:
+  allow_implicit_invocation: true
