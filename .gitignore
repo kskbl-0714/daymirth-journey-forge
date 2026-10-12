@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.idea/
+.gradle/
+**/build/
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.apk
+*.aab
+private-input/
+private-output/
+browser-profile*/
